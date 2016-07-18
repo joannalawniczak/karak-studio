@@ -1,0 +1,32 @@
+{
+  "name": "karak-studio",
+  "version": "1.0.0",
+  "description": "Static layout of Karak Studio company website.",
+  "scripts": {
+    "build": "./node_modules/.bin/gulp build",
+    "build:debug": "./node_modules/.bin/gulp build:debug",
+    "lint": "./node_modules/.bin/gulp lint"
+  },
+  "author": "Joanna Ławniczak <lawniczak.joanna@gmail.com>",
+  "license": "ISC",
+  "devDependencies": {
+    "babel-preset-es2015-rollup": "^1.1.1",
+    "del": "^2.2.0",
+    "gulp": "github:gulpjs/gulp#4.0",
+    "gulp-autoprefixer": "^3.1.0",
+    "gulp-cssnano": "^2.1.2",
+    "gulp-eslint": "^3.0.1",
+    "gulp-if": "^2.0.1",
+    "gulp-sass": "^2.2.0",
+    "rollup": "^0.29.0",
+    "rollup-plugin-babel": "^2.5.1",
+    "rollup-plugin-commonjs": "^3.0.0",
+    "rollup-plugin-node-resolve": "^1.7.0",
+    "rollup-plugin-uglify": "^0.3.1"
+  },
+  "dependencies": {
+    "normalize-scss": "^5.0.3",
+    "photoswipe": "^4.1.1",
+    "smooth-scroll": "github:cferdinandi/smooth-scroll"
+  }
+}

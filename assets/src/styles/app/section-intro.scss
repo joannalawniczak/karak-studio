@@ -1,0 +1,45 @@
+.intro {
+	background: #c22b54 url(../images/intro-bg1.jpg) 50% 50% no-repeat;
+	background-size: cover;
+	padding: 260px 0 230px;
+	color: #ffffff;
+	text-align: center;
+	margin-top: 70px;
+
+	h2 {
+		font-size: 50px;
+		margin: 0;
+		line-height: 56px;
+		padding: 0;
+	}
+
+	a {
+		&:hover {
+			text-decoration: none;
+		}
+	}
+
+	@media all and (max-width: 1024px) {
+		padding: 200px 0 180px;
+	}
+
+	@media all and (max-width: 768px) {
+		background: #c22b54 url(../images/intro-bg-768.jpg) 50% 50% no-repeat;
+		background-size: cover;
+		padding: 120px 0 130px;
+
+		h2 {
+			font-size: 32px;
+			line-height: 38px;
+		}
+	}
+
+	@media all and (max-width: 667px) {
+		margin-top: 50px;
+	}
+
+	@media all and (max-width: 375px) {
+		text-align: left;
+		padding: 160px 0 150px;
+	}
+}

@@ -1,0 +1,211 @@
+@mixin section-about {
+	[class^="about-"],
+	[class*=" about-"] {
+		@content;
+	}
+}
+
+.about {
+	margin: 0;
+	padding: 0;
+	counter-reset: my-counter;
+
+	@include section-about {
+		position: relative;
+		overflow: hidden;
+		padding-left: 50%;
+		counter-increment: my-counter;
+
+		&:before {
+			content: counter(my-counter, decimal-leading-zero);
+			position: absolute;
+			z-index: 2;
+			height: 300px;
+			top: 50%;
+			left: 8%;
+			transform: translateY(-50%);
+			font-size: 350px;
+			font-weight: 700;
+			line-height: 1em;
+			letter-spacing: -20px;
+		}
+
+		.inner {
+			position: relative;
+			z-index: 3;
+			padding-left: 0;
+
+			h2 {
+				padding: 160px 0 20px;
+			}
+
+			p {
+				font-size: 18px;
+				font-weight: 400;
+				margin: 0;
+				padding-bottom: 160px;
+			}
+		}
+	}
+
+	.about-who {
+		color: #ffffff;
+		background: #000000 url(../images/3m.svg) no-repeat 90% 230%;
+
+		&:before {
+			color: #5300ff;
+		}
+
+		&:after {
+			left: 0;
+			bottom: 0;
+			transform: translate(-50%, 50%);
+			border-color: #2d2d2d;
+		}
+	}
+
+	.about-since {
+		&:after {
+			left: 0;
+			top: 0;
+			transform: translate(-50%, -50%);
+			border-color: $primary-color;
+		}
+	}
+
+	.about-what {
+		color: #ffffff;
+		background: #5300ff;
+
+		&:after {
+			right: 0;
+			bottom: 0;
+			transform: translate(50%, 50%);
+			border-color: #4300cf;
+		}
+	}
+
+	@media all and (max-width: 1350px) {
+		@include section-about {
+			&:before {
+				left: 2%;
+			}
+		}
+
+		.about-who {
+			background-position: 120% 150%;
+			background-size: 70% 70%;
+		}
+	}
+
+	@media all and (max-width: 1024px) {
+		@include section-about {
+			&:before {
+				height: 230px;
+				font-size: 250px;
+				top: 50%;
+				transform: translateY(-50%);
+				left: 2%;
+			}
+
+			.inner {
+				h2 {
+					padding: 130px 0 20px;
+					font-size: 32px;
+					line-height: 38px;
+				}
+
+				p {
+					padding-bottom: 130px;
+					font-size: 16px;
+				}
+			}
+		}
+
+		.about-who {
+			background: #000000;
+		}
+	}
+
+	@media all and (max-width: 736px) {
+		@include section-about {
+			&:before {
+				height: 170px;
+				font-size: 170px;
+				top: 50%;
+				transform: translateY(-50%);
+				left: 2%;
+				letter-spacing: -10px;
+			}
+
+			.inner {
+				h2 {
+					padding: 90px 0 20px;
+					font-size: 30px;
+				}
+
+				p {
+					padding-bottom: 90px;
+				}
+			}
+		}
+	}
+
+	@media all and (max-width: 440px) {
+		@include section-about {
+			padding-left: 20px;
+
+			&:before {
+				content: none;
+			}
+
+			.inner {
+				h2 {
+					padding: 80px 0 20px;
+					font-size: 32px;
+					line-height: 38px;
+				}
+
+				p {
+					padding-bottom: 80px;
+					font-size: 16px;
+				}
+			}
+		}
+
+		.about-since {
+			&:after {
+				content: none;
+			}
+		}
+	}
+
+	@media all and (max-width: 375px) {
+		@include section-about {
+			padding-left: 20px;
+
+			&:before {
+				content: none;
+			}
+
+			.inner {
+				h2 {
+					padding: 80px 0 20px;
+					font-size: 32px;
+					line-height: 38px;
+				}
+
+				p {
+					padding-bottom: 80px;
+					font-size: 16px;
+				}
+			}
+		}
+
+		.about-since {
+			&:after {
+				content: none;
+			}
+		}
+	}
+}

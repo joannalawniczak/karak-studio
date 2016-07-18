@@ -1,0 +1,26 @@
+.btn {
+	display: inline-block;
+	padding: 16px 70px;
+	margin-top: 40px;
+	border-radius: 30px;
+	font-size: 16px;
+	font-weight: 400;
+	color: #ffffff;
+	background: $primary-color;
+	transition: background .3s;
+
+	&:hover {
+		background: darken($primary-color, 9%);
+	}
+
+	@media all and (max-width: 768px) {
+		margin-top: 20px;
+		padding: 14px 60px;
+	}
+
+	@media all and (max-width: 568px) {
+		margin-top: 30px;
+		padding: 12px 50px;
+		font-size: 14px;
+	}
+}

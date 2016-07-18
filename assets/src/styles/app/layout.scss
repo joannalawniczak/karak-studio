@@ -1,0 +1,41 @@
+/* Apply a natural box layout model to all elements.
+ * ---------------------------------------------------- */
+html {
+	box-sizing: border-box;
+}
+
+*, *:before, *:after {
+	box-sizing: inherit;
+}
+
+/* Animation when mobile navigation is open.
+ * ---------------------------------------------------- */
+main {
+	opacity: 1;
+	transition: opacity .3s;
+}
+
+/* Container for content.
+ * ---------------------------------------------------- */
+.inner {
+	max-width: 1300px;
+	margin: 0 auto;
+	padding: 0 30px;
+
+	@media all and (max-width: 667px) {
+		padding: 0 20px;
+	}
+}
+
+/* Decoration circle.
+ * ---------------------------------------------------- */
+.decoration-circle-a:after,
+.decoration-circle-b:before {
+	content: '';
+	position: absolute;
+	z-index: 1;
+	border: 120px solid;
+	border-radius: 50%;
+	width: 600px;
+	height: 600px;
+}

@@ -1,0 +1,95 @@
+.contact {
+	position: relative;
+	padding-bottom: 100px;
+	margin: 0;
+	overflow: hidden;
+	background: #f2f2f2;
+
+	&:after {
+		z-index: 1;
+		border-color: $secondary-color;
+		mix-blend-mode: multiply;
+		right: 0;
+		bottom: 0;
+		transform: translate(50%, 50%);
+	}
+
+	&:before {
+		content: '';
+		position: absolute;
+		width: 50%;
+		top: 0;
+		right: 0;
+		bottom: 0;
+		background: url(../images/contact-bg.jpg) 50% 50% no-repeat;
+		background-size: cover;
+	}
+
+	h3 {
+		margin: 0;
+		padding-bottom: 10px;
+		line-height: 36px;
+		font-size: 24px;
+
+		span {
+			color: $secondary-color;
+		}
+	}
+
+	h4 {
+		margin: 0;
+		padding: 30px 0 14px;
+		font-weight: 400;
+		text-transform: uppercase;
+		color: $secondary-color;
+	}
+
+	p {
+		margin: 0;
+		font-size: 20px;
+		line-height: 26px;
+		font-weight: 700;
+	}
+
+	@media all and (max-width: 1020px) {
+		h3 {
+			font-size: 20px;
+			line-height: 26px;
+		}
+	}
+
+	@media all and (max-width: 900px) {
+		padding-bottom: 60px;
+		text-align: center;
+
+		&:before {
+			display: none;
+		}
+	}
+
+	@media all and (max-width: 625px) {
+		&:after {
+			content: none;
+		}
+	}
+
+	@media all and (max-width: 375px) {
+		text-align: left;
+	}
+
+	@media all and (max-width: 320px) {
+		h3 {
+			font-size: 20px;
+		}
+
+		h4 {
+			padding-bottom: 6px;
+		}
+
+		p,
+		a {
+			font-size: 18px;
+			font-weight: 500;
+		}
+	}
+}
