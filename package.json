@@ -22,11 +22,11 @@
     "rollup-plugin-babel": "^2.5.1",
     "rollup-plugin-commonjs": "^3.0.0",
     "rollup-plugin-node-resolve": "^1.7.0",
-    "rollup-plugin-uglify": "^0.3.1"
+    "rollup-plugin-uglify": "^0.3.1",
+    "smooth-scroll": "github:cferdinandi/smooth-scroll",
+    "normalize-scss": "^5.0.3"
   },
   "dependencies": {
-    "normalize-scss": "^5.0.3",
-    "photoswipe": "^4.1.1",
-    "smooth-scroll": "github:cferdinandi/smooth-scroll"
+    "photoswipe": "^4.1.1"
   }
 }
