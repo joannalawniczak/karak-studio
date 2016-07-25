@@ -32,9 +32,16 @@
 
 	.offer-list {
 		display: flex;
+		justify-content: space-between;
 		padding: 20px 0 50px;
+		font-size: 22px;
+		font-weight: 700;
+		line-height: 28px;
+		text-align: left;
 
 		> li {
+			padding-right: 15px;
+
 			&:before {
 				content: '';
 				display: block;
@@ -44,96 +51,51 @@
 			}
 
 			&:first-child {
-				padding-right: 110px;
-				width: 50%;
-
 				&:before {
 					background: $primary-color;
 				}
 			}
 
 			&:nth-child(2) {
-				position: relative;
-				left: -70px;
-				width: 30%;
-
 				&:before {
 					background: $secondary-color;
 				}
 			}
 
 			&:nth-child(3) {
-				width: 20%;
+				padding-right: 0;
 
 				&:before {
 					background: $text-color;
 				}
 			}
 
-			ul {
-				text-align: left;
+			li {
+				padding-bottom: 10px;
 
-				li {
-					font-size: 24px;
-					font-weight: 700;
-
-					&:first-letter {
-						text-transform: capitalize;
-					}
+				&:first-letter {
+					text-transform: capitalize;
 				}
 			}
 		}
 	}
 
 	.prices {
-		display: block;
 		font-size: 18px;
 		font-weight: 500;
 		line-height: 24px;
 	}
 
-	@media all and (max-width: 1300px) {
-		.offer-list {
-			> li {
-				&:nth-child(2) {
-					position: relative;
-					left: -60px;
-					width: 30%;
-				}
-			}
-		}
-	}
-
 	@media all and (max-width: 1024px) {
 		.offer-list {
-			> li {
-				ul {
-					text-align: left;
-					li {
-						font-size: 20px;
-						font-weight: 700;
-					}
-				}
-			}
+			font-size: 20px;
 		}
 	}
 
-	@media all and (max-width: 768px) {
+	@media all and (max-width: 860px) {
 		.offer-list {
-			> li {
-				&:nth-child(2) {
-					left: -40px;
-					width: 30%;
-				}
-
-				ul {
-					li {
-						font-size: 18px;
-						line-height: 22px;
-						padding-bottom: 10px;
-					}
-				}
-			}
+			font-size: 18px;
+			line-height: 22px;
 		}
 
 		.prices {
@@ -141,30 +103,18 @@
 		}
 	}
 
-	@media all and (max-width: 568px) {
+	@media all and (max-width: 780px) {
 		.offer-list {
-			display: flex;
 			flex-direction: column;
-			padding: 0 0 40px;
+			padding: 0 0 20px;
+			text-align: center;
+			font-size: 20px;
 
 			> li {
+				padding: 0 0 30px;
+
 				&:before {
 					margin: 0 auto 25px;
-				}
-
-				&:first-child,
-				&:nth-child(2),
-				&:nth-child(3) {
-					position: static;
-					width: 100%;
-					padding: 0 0 20px;
-				}
-
-				ul {
-					li {
-						text-align: center;
-						font-size: 20px;
-					}
 				}
 			}
 		}
@@ -174,27 +124,11 @@
 		text-align: left;
 
 		.offer-list {
-			display: flex;
-			flex-direction: column;
+			text-align: left;
 
 			> li {
 				&:before {
 					margin-left: 0;
-					margin-bottom: 25px;
-				}
-
-				&:first-child,
-				&:nth-child(2),
-				&:nth-child(3) {
-					position: static;
-					width: 100%;
-					padding: 0 0 20px;
-				}
-
-				ul {
-					li {
-						text-align: left;
-					}
 				}
 			}
 		}
