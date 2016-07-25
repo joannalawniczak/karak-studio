@@ -3,7 +3,8 @@ import PhotoSwipeUI_Default from '../../../node_modules/photoswipe/dist/photoswi
 import template from './gallery-template.js';
 
 /**
- * Initialize Photo Swipe Gallery with pagination.
+ * Pagination for realization thumbnails.
+ * Initialize Photo Swipe Gallery after clicking on thumb.
  */
 export default function gallery() {
 	const galleryEl = document.querySelector( '.gallery' );
@@ -18,7 +19,7 @@ export default function gallery() {
 	document.body.appendChild( templateContainerEl );
 	const photoSwipeEl = templateContainerEl.querySelector( '.pswp' );
 
-	// Loop through each photo, get data from every single photo and set data-index for each el.
+	// Loop through each thumb in HTML, get data from every single photo and set data-index to every el.
 	let i = 0;
 	const photos = [].map.call( pagesWrapperEl.querySelectorAll( 'a' ), ( el ) => {
 		el.dataset.index = i++;
@@ -42,7 +43,7 @@ export default function gallery() {
  *
  * @param {Event} e Click event.
  * @param {HTMLElement} photoSwipeEl Photo swipe gallery container.
- * @param {Object[]} photos List of each photo from gallery.
+ * @param {Object[]} photos List of every photo from gallery.
  */
 function handleGalleryClick( e, photoSwipeEl, photos ) {
 	if ( e.target.nodeName.toLowerCase() != 'a' ) {
@@ -51,8 +52,19 @@ function handleGalleryClick( e, photoSwipeEl, photos ) {
 
 	e.preventDefault();
 
+	openGallery( parseInt( e.target.dataset.index ), photoSwipeEl, photos );
+}
+
+/**
+ * Open photo swipe gallery with specified photo.
+ *
+ * @param {Number} index Photo index.
+ * @param {HTMLElement} photoSwipeEl Photo swipe gallery container.
+ * @param {Object[]} photos List of every photo from gallery.
+ */
+function openGallery( index, photoSwipeEl, photos ) {
 	const gallery = new PhotoSwipe( photoSwipeEl, PhotoSwipeUI_Default, photos, {
-		index: parseInt( e.target.dataset.index ),
+		index: index,
 		closeOnScroll: false,
 		history: false,
 		showHideOpacity: true,
@@ -68,10 +80,10 @@ function handleGalleryClick( e, photoSwipeEl, photos ) {
  * Show page attached do specified pagination item after click on it.
  *
  * @param {Event} e Click event.
- * @param {HTMLCollection} pages List of gallery pages.
- * @param {HTMLCollection} pageNumbers List of pagination items.
+ * @param {NodeList} pages Gallery pages.
+ * @param {NodeList} paginationItems Pagination items.
  */
-function handlePageNumberClick( e, pages, pageNumbers ) {
+function handlePageNumberClick( e, pages, paginationItems ) {
 	if ( e.target.tagName.toLowerCase() != 'a' ) {
 		return;
 	}
@@ -82,11 +94,24 @@ function handlePageNumberClick( e, pages, pageNumbers ) {
 		return;
 	}
 
+	showPageByIndex( parseInt( e.target.dataset.index ), pages, paginationItems );
+}
+
+/**
+ * Show gallery page by index.
+ *
+ * @param {Number} index Page index.
+ * @param {NodeList} pages Gallery pages.
+ * @param {NodeList} paginationItems Pagination items.
+ */
+function showPageByIndex( index, pages, paginationItems ) {
+	// Clear each page.
 	for ( let i = 0; i < pages.length; i++ ) {
 		pages[ i ].classList.remove( 'active' );
-		pageNumbers[ i ].classList.remove( 'active' );
+		paginationItems[ i ].classList.remove( 'active' );
 	}
 
-	e.target.classList.add( 'active' );
-	pages[ parseInt( e.target.dataset.index ) ].classList.add( 'active' );
+	// Set new page as active.
+	paginationItems[ index ].classList.add( 'active' );
+	pages[ index ].classList.add( 'active' );
 }
