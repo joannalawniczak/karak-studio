@@ -1,7 +1,8 @@
 import smoothScroll from '../../../node_modules/smooth-scroll/dist/js/smooth-scroll.js';
 
 /**
- * Mobile navigation toggle and smooth scroll to page sections.
+ * Mobile navigation toggle.
+ * Attach Smooth scroll to page sections.
  */
 export default function header() {
 	const headerEl = document.querySelector( '.page-header' );
