@@ -18,16 +18,17 @@
 		}
 
 		li {
-			flex: auto;
-			width: 250px;
-			padding: 2%;
+			width: 25%;
+			padding: 0;
 
 			a {
 				display: block;
+				padding: 3%;
 				opacity: 1;
 				transition: ease .3s;
 
 				img {
+					display: block;
 					width: 100%;
 					height: auto;
 					pointer-events: none;
@@ -63,7 +64,21 @@
 		}
 	}
 
-	@media all and (max-width: 773px) {
+	@media all and (max-width: 1000px) {
+		.thumbs {
+			li {
+				width: 33.33%;
+			}
+		}
+	}
+
+	@media all and (max-width: 700px) {
+		.thumbs {
+			li {
+				width: 50%;
+			}
+		}
+
 		.pagination {
 			padding: 40px 0 50px;
 		}
@@ -71,6 +86,16 @@
 
 	@media all and (max-width: 375px) {
 		text-align: left;
+
+		.thumbs {
+			li {
+				width: 100%;
+
+				a {
+					padding: 3% 0;
+				}
+			}
+		}
 
 		.pagination {
 			li {
