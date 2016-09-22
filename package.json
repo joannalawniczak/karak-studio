@@ -2,6 +2,7 @@
   "name": "karak-studio",
   "version": "1.0.0",
   "description": "Static layout of Karak Studio company website.",
+  "author": "Joanna Ławniczak <lawniczak.joanna@gmail.com>",
   "repository": {
     "type" : "git",
     "url" : "git@github.com:joannalawniczak/karak-studio.git"
@@ -12,8 +13,6 @@
     "lint": "./node_modules/.bin/gulp lint",
     "test": "./node_modules/.bin/gulp test"
   },
-  "author": "Joanna Ławniczak <lawniczak.joanna@gmail.com>",
-  "license": "ISC",
   "devDependencies": {
     "babel-preset-es2015-rollup": "^1.2.0",
     "chai": "^3.5.0",
