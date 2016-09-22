@@ -8,6 +8,7 @@ export default function mobileNavigation( element ) {
 	element.querySelector( '.toggle-menu' )
 		.addEventListener( 'click', () => element.classList.toggle( 'menu-active' ) );
 
-	element.querySelector( 'a:not(.toggle-menu)' )
-		.addEventListener( 'click', () => element.classList.remove( 'menu-active' ) );
+	[].forEach.call( element.querySelectorAll( 'a:not(.toggle-menu)' ), ( menuItem ) => {
+		menuItem.addEventListener( 'click', () => element.classList.remove( 'menu-active' ) );
+	} );
 }
