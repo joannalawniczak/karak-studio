@@ -161,9 +161,8 @@ const tasks = {
 
 		if ( !options.debug ) {
 			const from = path.join( src, '**', '*.*' );
-			const to = path.join( dest );
 
-			return utils.copy( from, to );
+			return utils.copy( from, dest );
 		}
 
 		return utils.symlink( src, dest );
@@ -173,8 +172,8 @@ const tasks = {
 	 * Watches source files and run development build on change.
 	 */
 	watch() {
-		gulp.watch( config.styles.src, () => tasks.styles( { debug: true } ) );
-		gulp.watch( config.scripts.src, () => tasks.scripts( { debug: true } ) );
+		gulp.watch( config.styles.src, [ 'styles:debug' ] );
+		gulp.watch( config.scripts.src, [ 'scripts:debug' ] );
 	},
 
 	/**
