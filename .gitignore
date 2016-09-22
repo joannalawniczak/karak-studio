@@ -1,6 +1,5 @@
-# These files will be ignored by Git and by our linting tools:
-#	grunt jshint
-#	grunt jscs
+# These files will be ignored by Git and linting tools:
+#	gulp jslint
 #
 # Be sure to append /** to folders to have everything inside them ignored.
 

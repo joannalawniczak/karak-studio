@@ -11,9 +11,11 @@
 - iPhone 5s (Safari, Chrome)
 - iPad Air (Safari, Chrome)
 
-## Assets building:
-- `npm run build` - production build
-- `npm run build:debug` - development build (ending by watch)
+## Tasks
+- `gulp build` / `npm run build` - production build
+- `gulp build:debug` / `npm run build:debug` - development build, ends by watch
+- `gulp lint` / `npm run lint` - run ESLint
+- `gulp test` / `npm test` - run JS unit tests
 
 ## Note:
 The author of JavaScript code is [Oskar Wróbel](https://github.com/oskarwrobel).
