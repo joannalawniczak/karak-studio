@@ -1,5 +1,8 @@
 # Static layout of company website.
 
+[![Dependency Status](https://david-dm.org/joannalawniczak/karak-studio.svg)](https://david-dm.org/joannalawniczak/karak-studio)
+[![devDependency Status](https://david-dm.org/joannalawniczak/karak-studio/dev-status.svg)](https://david-dm.org/joannalawniczak/karak-studio?type=dev)
+
 ## Preview:
 [http://joannalawniczak.github.io/karak-studio/]([http://joannalawniczak.github.io/karak-studio/])
 
