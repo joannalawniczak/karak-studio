@@ -6,10 +6,8 @@ import mobileNavigation from './mobile-navigation.js';
  * Attach Smooth scroll to page sections.
  */
 export default function header() {
-	const headerEl = document.querySelector( '.page-header' );
-
 	// Add mobile navigation support
-	mobileNavigation( headerEl );
+	mobileNavigation( document.querySelector( '.page-header' ) );
 
 	// Attach smooth scroll to every element with [data-scroll] attribute.
 	smoothScroll.init( { speed: 700 } );
