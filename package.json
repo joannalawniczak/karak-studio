@@ -2,49 +2,23 @@
   "name": "karak-studio",
   "version": "1.0.0",
   "description": "Static layout of Karak Studio company website.",
+  "author": "Joanna Ławniczak <lawniczak.joanna@gmail.com>",
   "repository": {
-	"type" : "git",
-	"url" : "git@github.com:joannalawniczak/karak-studio.git"
+    "type" : "git",
+    "url" : "git@github.com:joannalawniczak/karak-studio.git"
   },
   "scripts": {
-	"build": "./node_modules/.bin/gulp build",
-	"build:debug": "./node_modules/.bin/gulp build:debug",
-	"lint": "./node_modules/.bin/gulp lint",
-	"test": "./node_modules/.bin/gulp test"
+    "build": "./node_modules/.bin/gulp build",
+    "lint": "./node_modules/.bin/gulp lint",
+    "test": "./node_modules/.bin/gulp test"
   },
-  "author": "Joanna Ławniczak <lawniczak.joanna@gmail.com>",
-  "license": "ISC",
   "devDependencies": {
-	"babel-preset-es2015-rollup": "^1.2.0",
-	"chai": "^3.5.0",
-	"del": "^2.2.2",
-	"git-guppy": "^1.2.1",
-	"gulp": "^3.9.1",
-	"gulp-autoprefixer": "^3.1.1",
-	"gulp-cssnano": "^2.1.2",
-	"gulp-eslint": "^3.0.1",
-	"gulp-filter": "^4.0.0",
-	"gulp-if": "^2.0.1",
-	"gulp-sass": "^2.3.2",
-	"gulp-sym": "0.0.14",
-	"guppy-pre-commit": "^0.4.0",
-	"karma": "^1.3.0",
-	"karma-chai": "^0.1.0",
-	"karma-chrome-launcher": "^2.0.0",
-	"karma-mocha": "^1.1.1",
-	"karma-mocha-reporter": "^2.1.0",
-	"karma-rollup-preprocessor": "^2.0.2",
-	"karma-sinon": "^1.0.5",
-	"mocha": "^3.0.2",
-	"rollup": "^0.35.11",
-	"rollup-plugin-babel": "^2.6.1",
-	"rollup-plugin-commonjs": "^5.0.0",
-	"rollup-plugin-node-resolve": "^2.0.0",
-	"rollup-plugin-uglify": "^1.0.1",
-	"run-sequence": "^1.2.2",
-	"sinon": "^1.17.5",
-    "smooth-scroll": "github:cferdinandi/smooth-scroll",
-    "normalize-scss": "^5.0.3"
+    "gulp": "^3.9.1",
+    "guppy-pre-commit": "^0.4.0",
+    "normalize-scss": "^6.0.0",
+    "run-sequence": "^1.2.2",
+    "static-layout-starter-dev-tools": "^1.0.0",
+    "smooth-scroll": "github:cferdinandi/smooth-scroll"
   },
   "dependencies": {
     "photoswipe": "^4.1.1"
